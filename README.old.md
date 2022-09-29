@@ -1,2 +1,2 @@
-# calculeasing
+# calculease
 Leasing Calculator SPA

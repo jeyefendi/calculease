@@ -1,4 +1,4 @@
-import React from 'react'
+ import React from 'react'
 
 export default function LeaseCalculator() {
   return (
@@ -6,11 +6,11 @@ export default function LeaseCalculator() {
         <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
         <form>
             <div className="form-item">
-                <label>Стоимость автомобиля</label>
+                <label htmlFor="lease-amount">Стоимость автомобиля</label>
                 <div className="form-input">
                     <input 
                       type="number"
-                      name="leasing-amount"
+                      name="lease-amount"
                       placeholder="0"
                       />
                 </div>
