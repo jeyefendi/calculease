@@ -4,7 +4,7 @@ export default function LeaseCalculator() {
   return (
     <div className='leasing-calculator-container'>
         <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
-        <form>
+        <form className='leasing-calculator-form'>
             <div className="form-item">
                 <label htmlFor="lease-amount">Стоимость автомобиля</label>
                 <div className="form-input">
