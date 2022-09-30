@@ -1,44 +1,48 @@
- import React from 'react'
+import React from "react";
 
 export default function LeaseCalculator() {
   return (
-    <div className='leasing-calculator-container'>
-        <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
-        <form className='leasing-calculator-form'>
-            <div className="form-item">
-                <label htmlFor="lease-amount">Стоимость автомобиля</label>
-                <div className="form-input">
-                    <input 
-                      type="number"
-                      name="lease-amount"
-                      placeholder="0"
-                      />
-                </div>
-            </div>
+    <div className="lease-calculator-container">
+      <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
+      <form className="lease-calculator-form">
+        <div className="form-item">
+          <label htmlFor="lease-amount">Стоимость автомобиля</label>
+          <input
+            type="number"
+            name="lease-amount"
+            placeholder="0"
+            className="form-input"
+          />
+        </div>
 
-            <div className="form-item">
-                <label>Первоначальный взнос</label>
-                <div className="form-input">
-                    <input 
-                      type="number"
-                      name="initial-payment"
-                      placeholder="0"
-                      />
-                </div>
-            </div>
+        <div className="form-item">
+          <label htmlFor="initial-payment">Первоначальный взнос</label>
+          <input
+            type="number"
+            name="initial-payment"
+            placeholder="0"
+            className="form-input"
+          />
+        </div>
 
-            <div className="form-item">
-                <label>Срок лизинга</label>
-                <div className="form-input">
-                    <input 
-                      type="number"
-                      name="lease-term"
-                      placeholder="0"
-                      />
-                </div>
-            </div>
+        <div className="form-item">
+          <label htmlFor="lease-term">Срок лизинга</label>
+          <input
+            type="number"
+            name="lease-term"
+            placeholder="0"
+            className="form-input"
+          />
+        </div>
 
-        </form>
+        <div className="form-action">
+          <input
+            type="submit"
+            value="Оставить заявку"
+            className="form-button"
+          />
+        </div>
+      </form>
     </div>
-  )
+  );
 }

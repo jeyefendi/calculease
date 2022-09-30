@@ -1,0 +1,61 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(./fonts/Gilroy.ttf);
+}
+
+@font-face {
+  font-family: Nekst;
+  src: url(./fonts/Nekst.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --black: #111;
+  --grey: #575757;
+  --grey_light: #f3f3f4;
+  --orange: #ff9514;
+}
+
+h1 {
+  font-family: Nekst;
+  font-size: 54px;
+  line-height: 90%;
+  color: var(--black);
+}
+
+.lease-calculator-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-input {
+    width: 427px;
+    height: 68px;
+    background: var(--grey_light);
+    border-radius: 16px;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 426px;
+  height: 68px;
+  background: var(--orange);
+  border-radius: 40px;
+  font-family: "Nekst";
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  border: none;
+}
