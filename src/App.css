@@ -12,8 +12,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
+
 body {
   text-decoration: none;
   list-style: none;
@@ -27,22 +27,54 @@ body {
 }
 
 h1 {
-  font-family: Nekst;
+  font-family: "Nekst";
   font-size: 54px;
   line-height: 90%;
   color: var(--black);
+  margin-top: 213px;
+}
+
+h2 {
+  font-family: "Nekst";
+  font-size: 54px;
+  line-height: 90%;
+  color: var(--grey);
+}
+
+label {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--grey);
 }
 
 .lease-calculator-form {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  padding: 2em 3em;
+}
+
+.lease-form-row1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lease-form-row2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
 }
 
 .form-input {
-    width: 427px;
-    height: 68px;
-    background: var(--grey_light);
-    border-radius: 16px;
+  width: 427px;
+  height: 68px;
+  background: var(--grey_light);
+  border-radius: 16px;
+  padding: 16px 24px;
+  font-family: "Nekst";
+  font-size: 30px;
+  line-height: 36px;
+  color: var(--grey);
+  margin-top: 24px;
 }
 
 .form-button {
@@ -58,4 +90,41 @@ h1 {
   line-height: 36px;
   color: #fff;
   border: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+  h1 {
+    margin-top: 100px;
+  }
+  
+  .lease-calculator-form {
+    display: grid;
+    padding: 2em 3em;
+  }
+
+  .lease-form-row1, .lease-form-row2 {
+    display: grid;
+    gap: 2em;
+  }
+
+  .lease-form-row2 {
+    margin-top: 37px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .form-input {
+    width: 90.625vw;
+  }
+
+  .form-item {
+    display: grid;
+  }
+  
+  .form-button {
+    width: 345px;
+    margin-top: 44px;
+  }
 }
