@@ -1,3 +1,8 @@
+# CALCULEASE
+><br>TypeScript <b>React.js <br>JSX <br>SASS <br>webpack</b>
+## [LIVE DEMO](https://calculease.netlify.app/)
+![Logo](./COVER.jpg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
