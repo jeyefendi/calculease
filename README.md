@@ -1,5 +1,5 @@
 # CALCULEASE
-><br>TypeScript <b>React.js <br>JSX <br>SASS <br>webpack</b>
+><b>TypeScript <br>React.js <br>JSX <br>SASS <br>webpack</b>
 ## [LIVE DEMO](https://calculease.netlify.app/)
 ![Logo](./COVER.jpg)
 
