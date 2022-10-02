@@ -1,4 +1,3 @@
-import './response.css'
 import './style.css'
 
 export default function LeaseCalculator() {
