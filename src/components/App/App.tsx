@@ -1,5 +1,5 @@
 import './App.css';
-import LeaseCalculator from './LeaseCalculator';
+import LeaseCalculator from '../Form/LeaseCalculator';
 
 function App() {
   return (

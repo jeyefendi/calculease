@@ -1,0 +1,73 @@
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: "Nekst";
+  font-size: 54px;
+  line-height: 90%;
+}
+
+h1 {
+  color: var(--black);
+  width: 753px;
+  margin-top: 213px;
+  margin-left: 47px;
+}
+
+h2 {
+  margin-top: 8px;
+  color: var(--grey);
+}
+
+label {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--grey);
+}
+
+.lease-calculator-form {
+  display: grid;
+  padding: 2em 3em;
+  justify-content: center;
+}
+
+.lease-form-row1,
+.lease-form-row2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lease-form-row2 {
+  margin-top: 44px;
+}
+
+.form-input,
+.form-button {
+  font-family: "Nekst";
+  font-size: 30px;
+  line-height: 36px;
+  width: 426px;
+  height: 68px;
+}
+
+.form-input {
+  color: var(--grey);
+  background: var(--grey_light);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-top: 24px;
+}
+
+.form-button {
+  color: #fff;
+  background: var(--orange);
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

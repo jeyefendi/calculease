@@ -1,0 +1,28 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(/src/fonts/Gilroy.ttf);
+}
+
+@font-face {
+  font-family: Nekst;
+  src: url(/src/fonts/Nekst.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --black: #111;
+  --grey: #575757;
+  --grey_light: #f3f3f4;
+  --orange: #ff9514;
+}
+
