@@ -16,10 +16,11 @@ export default function LeaseCalculator() {
             />
             <input
               type="range"
-              id="total-cost"
-              placeholder="3 300 000"
+              id="total-cost-range"
+              className="input-range"
               min="1000000"
               max="6000000"
+              value={3300000}
             />
           </div>
 
@@ -27,8 +28,13 @@ export default function LeaseCalculator() {
             <label htmlFor="initial-fee">Первоначальный взнос</label>
             <input
               type="number"
-              name="initial-fee"
+              id="initial-fee"
               placeholder="420 000"
+            />
+            <input
+              type="range"
+              id="initial-fee-range"
+              className="input-range"
               min="10%"
               max="60%"
             />
@@ -39,9 +45,14 @@ export default function LeaseCalculator() {
             <label htmlFor="lease-term">Срок лизинга</label>
             <input
               type="number"
-              name="lease-term"
+              id="lease-term"
               placeholder="60"
-              className="form-input"
+            />
+            
+            <input
+              type="range"
+              id="lease-term-range"
+              className="input-range"
               min="1"
               max="60"
             />
@@ -51,12 +62,12 @@ export default function LeaseCalculator() {
         <div className="lease-form-row2">
           <div className="form-item">
             <label>Сумма договора лизинга</label>
-            <h2>4 467 313 Р</h2>
+            <div className="value" id="lease-amount" >0<span>₽</span></div>
           </div>
 
           <div className="form-item">
             <label>Ежемесячный платеж от</label>
-            <h2>114 455 Р</h2>
+            <div className="value" id="monthly-payment" >0<span>₽</span></div>          
           </div>
 
           <div className="form-action">
