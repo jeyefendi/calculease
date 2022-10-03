@@ -21,6 +21,14 @@ h2 {
   color: var(--grey);
 }
 
+input {
+  color: var(--grey);
+  background: var(--grey_light);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-top: 24px;
+}
+
 label {
   font-family: "Gilroy";
   font-size: 16px;
@@ -44,21 +52,13 @@ label {
   margin-top: 44px;
 }
 
-.form-input,
+input,
 .form-button {
   font-family: "Nekst";
   font-size: 30px;
   line-height: 36px;
   width: 426px;
   height: 68px;
-}
-
-.form-input {
-  color: var(--grey);
-  background: var(--grey_light);
-  border-radius: 16px;
-  padding: 16px 24px;
-  margin-top: 24px;
 }
 
 .form-button {

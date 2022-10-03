@@ -8,23 +8,31 @@ export default function LeaseCalculator() {
         <div className="lease-form-row1">
           
           <div className="form-item">
-            <label htmlFor="lease-amount">Стоимость автомобиля</label>
+            <label htmlFor="total-cost">Стоимость автомобиля</label>
             <input
               type="number"
-              name="lease-amount"
+              id="total-cost"
+              value={3300000}
+            />
+            <input
+              type="range"
+              id="total-cost"
               placeholder="3 300 000"
-              className="form-input"
+              min="1000000"
+              max="6000000"
             />
           </div>
 
           <div className="form-item">
-            <label htmlFor="initial-payment">Первоначальный взнос</label>
+            <label htmlFor="initial-fee">Первоначальный взнос</label>
             <input
               type="number"
-              name="initial-payment"
+              name="initial-fee"
               placeholder="420 000"
-              className="form-input"
+              min="10%"
+              max="60%"
             />
+            
           </div>
 
           <div className="form-item">
@@ -34,6 +42,8 @@ export default function LeaseCalculator() {
               name="lease-term"
               placeholder="60"
               className="form-input"
+              min="1"
+              max="60"
             />
           </div>
         </div>
