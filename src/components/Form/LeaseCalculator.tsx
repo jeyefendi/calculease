@@ -1,10 +1,32 @@
 import './style.css'
+import LoanJS from 'loanjs'
+import { useState } from 'react';
 
 export default function LeaseCalculator() {
+
+  const [values, setValues] = useState({
+    "total-cost": 3300000,
+    "initial-fee": 420000,
+    "lease-term": 60
+  });
+  
+  const [installments, setInstallments] = useState([]);
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault();
+    calculate(10000, 30, 4);
+  }
+
+  const calculate = (amount: number, years: number, rate: number) => {
+    var loan = new LoanJS.Loan(amount, years * 12, rate);
+    setInstallments(loan.installments);
+  }
+
+
   return (
     <div className="lease-calculator-container">
       <h1>Рассчитайте стоимость автомобиля в лизинг</h1>
-      <form className="lease-calculator-form">
+      <form onSubmit={handleSubmit} className="lease-calculator-form">
         <div className="lease-form-row1">
           
           <div className="form-item">
@@ -12,7 +34,7 @@ export default function LeaseCalculator() {
             <input
               type="number"
               id="total-cost"
-              value={3300000}
+              value={values["total-cost"]}
             />
             <input
               type="range"
@@ -20,7 +42,7 @@ export default function LeaseCalculator() {
               className="input-range"
               min="1000000"
               max="6000000"
-              value={3300000}
+              value={values["total-cost"]}
             />
           </div>
 
@@ -29,12 +51,13 @@ export default function LeaseCalculator() {
             <input
               type="number"
               id="initial-fee"
-              placeholder="420 000"
+              value={values["initial-fee"]}
             />
             <input
               type="range"
               id="initial-fee-range"
               className="input-range"
+              value={values["initial-fee"]}
               min="10%"
               max="60%"
             />
@@ -46,13 +69,14 @@ export default function LeaseCalculator() {
             <input
               type="number"
               id="lease-term"
-              placeholder="60"
+              value={values["lease-term"]}
             />
             
             <input
               type="range"
               id="lease-term-range"
               className="input-range"
+              value={values["lease-term"]}
               min="1"
               max="60"
             />
