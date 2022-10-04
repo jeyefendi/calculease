@@ -12,9 +12,22 @@ export default function LeaseCalculator() {
   
   const [installments, setInstallments] = useState([]);
 
+  const handleInputChange = (event: any) => {
+    const {name, value} = event.target;
+    setValues({
+      ...values,
+      [name]: value
+    });
+  }
+
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    calculate(10000, 30, 4);
+
+    calculate(
+      values["total-cost"],
+      values["initial-fee"],
+      values["lease-term"]
+    );
   }
 
   const calculate = (amount: number, years: number, rate: number) => {
@@ -35,6 +48,7 @@ export default function LeaseCalculator() {
               type="number"
               id="total-cost"
               value={values["total-cost"]}
+              onChange={handleInputChange}
             />
             <input
               type="range"
@@ -43,6 +57,7 @@ export default function LeaseCalculator() {
               min="1000000"
               max="6000000"
               value={values["total-cost"]}
+              onChange={handleInputChange}
             />
           </div>
 
@@ -52,12 +67,14 @@ export default function LeaseCalculator() {
               type="number"
               id="initial-fee"
               value={values["initial-fee"]}
+              onChange={handleInputChange}
             />
             <input
               type="range"
               id="initial-fee-range"
               className="input-range"
               value={values["initial-fee"]}
+              onChange={handleInputChange}
               min="10%"
               max="60%"
             />
@@ -70,6 +87,7 @@ export default function LeaseCalculator() {
               type="number"
               id="lease-term"
               value={values["lease-term"]}
+              onChange={handleInputChange}
             />
             
             <input
@@ -77,6 +95,7 @@ export default function LeaseCalculator() {
               id="lease-term-range"
               className="input-range"
               value={values["lease-term"]}
+              onChange={handleInputChange}
               min="1"
               max="60"
             />
